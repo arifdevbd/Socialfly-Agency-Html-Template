@@ -1,0 +1,1168 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* 
+===========================================================================================
+================================== Start Css Styling =============================================
+============================================================================================
+ */
+
+/* ==================== Start General  styling====================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+   font-family: 'Open Sans', sans-serif !important;
+    font-weight: 400;
+    line-height: 27px !important;
+}
+h1,h2,h3,h4{
+   font-weight: 600 !important;
+}
+
+/* ==================== END General  styling====================*/
+
+/* ====================Start Common  styling====================*/
+
+a,a:hover{
+    text-decoration: none !important;
+}
+ul{
+    list-style: none;
+}
+input:focus,
+textarea:focus{
+   outline: 0;
+}
+.sectionPadding{
+   padding-top: 80px;
+}
+.button {
+  border: none;
+  position: relative;
+  padding: 8px 20px;
+  font-size: 18px;
+  background: transparent;
+  overflow: hidden;
+  color: #506cea;
+  display: inline-block !important;
+}
+.button span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid #506cea;
+}
+.button span:before {
+  content: '';
+  position: absolute;
+  width: 10%;height: 500%;
+  background: #fff;
+  top: 50%;left: 50%;
+  transform: translate(-50%,-50%) rotate(-50deg);
+  transition: all .5s linear;
+}
+.button:hover span:before {
+  transform: translate(-50%,-50%) rotate(-90deg);
+  width: 100%;
+  background: #506cea;
+}
+.button a {
+  color: #506cea;
+}
+.button:hover a {
+  color: #fff;
+}
+.sectionHead {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.sectionHead h2 {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  background: #fff;
+  padding: 10px 20px;
+}
+.sectionHead h2:before {
+  content: '';
+  width: 40px;height: 30px;
+  background: linear-gradient(to right, #fff, #007bff);
+  right: -5px;top: -5px;
+  position: absolute;
+  z-index: -1;
+}
+.sectionHead h2::after {
+  content: '';
+  width: 40px;height: 30px;
+  background: linear-gradient(to right, #007bff, #fff);
+  left: -5px;bottom: -5px;
+  position: absolute;
+  z-index: -1;
+}
+  
+/* ==================== END Common   styling====================*/
+
+/* ==================== Start Menu Area   styling====================*/
+#menu {
+  background-color: transparent;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 99;
+}
+a.navbar-brand {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+span.logo {
+  color: #506cea;
+}
+.navbar-nav li a{
+  font-size: 18px;
+  color: #333 !important;
+  font-weight: 600;
+  margin-left: 10px;
+  position: relative;
+  transition: all .5s linear;
+}
+.navbar-nav li a:hover,
+.navbar-nav li a.active{
+  color: #506cea !important;
+}
+.navbar-nav li a:before{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 0px;
+  top: 100%;
+  left: 8px;
+  background: #506cea;
+  transition: all .5s linear;
+}
+.navbar-nav li a.active::before{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  top: 100%;
+  left: 8px;
+  background: #506cea;
+  transition: all .5s linear;
+}
+.navbar-nav li a:hover:before{
+  width: 30px;
+}
+.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff !important;
+  height: 60px !important;
+  transition: all .5s linear;
+}
+
+/* ==================== END  Menu Area   styling====================*/
+
+
+/* ==================== Start Banner Area    styling====================*/
+#banner{
+  padding: 100px 0 30px 0;
+}
+.bannerLeft h5 {
+  font-size: 24px;
+  color: #506cea;
+  position: relative;
+}
+.bannerLeft h5:before{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 2px;
+  background: #506cea;
+}
+.bannerLeft h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.bannerLeft p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+
+
+#laptop{
+  animation: laptop 1s ease;
+  transform-origin: center;
+  overflow: hidden;
+}
+#laptopScreenImg{
+  animation: laptopScreenImg 1.5s ease;
+}
+@keyframes laptop{
+  from{
+      transform: scale(0);
+      opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes laptopScreenImg{
+  from{
+     transform: translateX(200px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+#msg-sm{
+  animation: msg-sm 1s ease 1.5s;
+}
+#msg-big{
+  animation: msg-big 1s ease 1.8s;
+}
+@keyframes msg-sm{
+  from{
+      transform: translateX(300px);
+      opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes msg-big {
+  from{
+     transform: translateY(-200px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+#laptop-man{
+  animation: laptopMan 1s ease-in 1s;
+}
+#laptop-man-laptop{
+  animation: laptopManLaptop 1s ease-in 1.2s;
+}
+@keyframes laptopManLaptop{
+    from{
+        transform: translateY(-300px);
+    }
+    to{
+      transform: translateY(0px);
+    }
+}
+@keyframes laptopMan{
+    from{
+        transform: translateX(300px);
+    }
+    to{
+      transform: translateX(0px);
+    }
+}
+#man-stand{
+  animation: manStand 1s ease-in .3s;
+}
+#talk-right-man{
+  animation: rightMan 1s ease-in .5s;
+}
+@keyframes manStand{
+  from{
+      transform: translateY(200px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+@keyframes rightMan{
+  from{
+      transform: translateX(300px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+#woman-mike{
+  animation: womanMike 1s ease-in .8s;
+}
+@keyframes womanMike{
+  from{
+      transform: translateY(200px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+#like1,#like2,#love,#media{
+  animation: like .8s linear infinite alternate;
+  transform-origin: bottom;
+}
+@keyframes like{
+  from{
+      transform: translateY(-5px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+/* ==================== END  Banner Area   styling====================*/
+
+/* ==================== Start About area  styling====================*/
+.aboutOurImg svg {
+  width: 98%;
+}
+.aboutOurContent h5 {
+  font-size: 24px;
+  color: #506cea;
+  position: relative;
+}
+.aboutOurContent h5:before{
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 2px;
+  background: #506cea;
+}
+.aboutOurContent h2 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.aboutOurContent p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+#location{
+  animation: location 2s ease-in infinite alternate;
+}
+#thick{
+  animation: thick 1s ease-in  infinite alternate;
+}
+#sms{
+  animation: sms .7s ease-in infinite alternate;
+}
+@keyframes location{
+  from{
+      transform: translateX(-5px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+@keyframes thick{
+  from{
+      transform: translateX(5px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+@keyframes sms{
+  from{
+      transform: translateY(-5px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+#aboutMan{
+  animation: aboutMan 2s ease-in infinite alternate;
+}
+@keyframes aboutMan{
+  from{
+      transform: translateX(-10px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+
+/* ==================== End About Area  styling====================*/
+
+/* ==================== Start Service Area  styling====================*/
+.main {
+  width: 100%;
+  min-height: 380px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+.serviceItem {
+  background: #506cea;
+  padding: 30px 20px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  z-index: 1;
+  box-shadow: 0 0 20px -15px #030380;
+  transition: transform .8s;
+}
+.serviceIcon {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: -90px auto 0;
+  background: #506cea;
+  border: 14px solid #fff;
+}
+.serviceIcon img {
+  width: 50px;
+  margin-top: 20px;
+  transition: transform 1s;
+}
+.serviceItem h4 {
+  height: 35px;
+  width: 80%;
+  background: #506cea;
+  margin: 50px auto;
+  position: relative;
+}
+.serviceItem h4:before {
+  content: '';
+  width: 40px;height: 30px;
+  background: linear-gradient(to right, #fff, #007bff);
+  right: -5px;top: -5px;
+  position: absolute;
+  z-index: -1;
+}
+.serviceItem h4::after {
+  content: '';
+  width: 40px;height: 30px;
+  background: linear-gradient(to right, #007bff, #fff);
+  left: -5px;bottom: -5px;
+  position: absolute;
+  z-index: -1;
+}
+.shadowOne {
+  height: 200px;
+  width: 80%;
+  background: #506cea;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  left: 10%;
+  z-index: -1;
+  box-shadow: 0 0 20px -15px #030380;
+  transition: transform .8s;
+}
+.shadowTwo {
+  height: 200px;
+  width: 64%;
+  background: #506cea;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  left: 18%;
+  z-index: -2;
+}
+.main:hover .serviceItem{
+  transform: translateY(-50px);
+}
+.main:hover .shadowOne{
+  transform: translateY(-25px);
+}
+.main:hover img{
+  transform: rotate(360deg);
+}
+/* ==================== End Service Area  styling====================*/
+
+/* ==================== Start Partner Area  styling====================*/
+#partner .slick-prev,#partner  .slick-next{
+  display: none !important;
+}
+.slick-slide img {
+  margin: 0 auto;
+}
+/* ==================== End Partner Area  styling====================*/
+
+/* ==================== Start Team Area styling====================*/
+.teamImg svg {
+  width: 97%;
+}
+#gril{
+  animation: gril 1s linear infinite alternate ;
+}
+#man2{
+  animation: man2 1s linear infinite alternate .5s;
+}
+#man1{
+  animation: man1 1s linear infinite alternate .5s;
+}
+@keyframes gril{
+  from{
+    transform: translateX(-10px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+@keyframes man1{
+  from{
+    transform: translateX(-10px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+@keyframes man2{
+  from{
+    transform: translateY(-6px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+#grilStand,#boyStand{
+  animation: grilStand 2s linear infinite alternate;
+}
+@keyframes grilStand{
+  from{
+    transform: translateX(-10px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+
+
+p.team-heading {
+  color: #506cea;
+}
+
+.teamContent h3 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.teamContent {
+  padding-right: 30px;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+/* ==================== End Team Area styling====================*/
+
+/* ==================== Start Counter Area  styling====================*/
+#counter{
+  background: url(../images/laptop-technology-ipad-tablet-35550.jpg), linear-gradient(to right, #2240c5,#2240c5);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  margin-top: 80px;
+}
+.conterItem {
+  text-align: center;
+  padding: 90px 0;
+  position: relative;
+  color: #fff;
+  transition: all .5s linear;
+}
+.conterItem:hover{
+  transform: translateY(-5px);
+}
+.conterItem:before {content: '';position: absolute;background: #fff;height: 75px;width: 2px;top: 0;left: 0;right: 0;margin: 0 auto;
+  transition: all .5s linear;
+}
+.conterItem::after {content: '';position: absolute;background: #fff;height: 75px;width: 2px;bottom: 0;left: 0;right: 0;margin: 0 auto;
+  transition: all .5s linear;
+}
+.conterItem:hover:before,
+.conterItem:hover::after{
+  height: 0;
+}
+.conterItem i {
+  background: #ffff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #506cea;
+  font-size: 24px;
+  border-radius: 50%;
+  margin: 20px 0;
+  border: 1px solid transparent;
+  transition: .4s;
+}
+.conterItem:hover i{
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+/* ==================== End Counter Area  styling====================*/
+
+
+
+/* ==================== Start Testimonial Area  styling====================*/
+.reviewImg {
+  width: 100px;
+  height: 100px;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 7px solid #506cea;
+}
+.reviewImg img{
+  width: 100%;
+}
+#review {
+  background: #101F41;
+  padding: 80px 0;
+  margin-top: 80px;
+}
+
+.reviewItem {
+  background: #fff;
+  margin: 0px 5px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+.reviewContent h4 {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.reviewContent h3 {
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #506cea;
+  padding-top: 15px;
+}
+
+.reviewContent p i {
+  color: #506cea;
+  font-size: 12px;
+}
+
+.reviewContent p.clientText {
+  border-top: 1px solid #506cea;
+  padding-top: 7px;
+}
+/* ==================== End Testimonial Area  styling====================*/
+
+/* ==================== Start Home blog styling====================*/
+
+
+.blogImg{
+  transition: transform .4s linear;
+}
+.blogImg img {
+  width: 100%;
+}
+.blogItem:hover .blogContent {
+  transform: translateY(-80px);
+}
+.blogContent {
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  background: #fff;
+  box-shadow: 0 11px 10px 2px rgba(0,0,0,.5);
+  transform: translateY(-60px);
+  transition: transform .4s linear;
+}
+.blogItem:hover .blogImg {
+  transform: translateY(20px);
+}
+.blogContent h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: all .4s linear;
+}
+.blogItem:hover h2{
+  color: #506cea;
+}
+.blogContent a {
+  color: #333;
+  font-weight: 600;
+  transition: all .4s linear;
+}
+
+.blogContent a:hover {
+  margin-left: 5px;
+  color: #506cea;
+}
+
+/* ==================== End Home blog styling====================*/
+
+
+/* ====================Start Footer area styling====================*/
+footer {
+  padding: 50px 0px 10px 0px;
+  font-family: "Poppins", sans-serif;
+  background-color: #101F41;
+  color: #ffffffff;
+}
+
+footer .brand {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 400;
+  text-decoration: none !important;
+  color: #ffffffff;
+}
+
+footer .brand .logoStyle {
+  color: #506cea;
+  font-weight: 700;
+}
+
+footer .addressFooter, footer .links {
+  list-style: none;
+  padding: 0px;
+}
+
+footer .addressFooter li, footer .links li {
+  display: block;
+  margin-top: 10px;
+}
+
+footer .addressFooter li span, footer .links li span {
+  padding-right: 5px;
+}
+
+footer .socialFooter {
+  list-style: none;
+  padding: 0px;
+  margin-top: 30px;
+}
+
+footer .socialFooter li {
+  display: inline-block;
+}
+
+footer .socialFooter li a {
+  color: #ffffffff;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+footer .socialFooter li a i {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px solid #506cea;
+}
+footer .socialFooter li a i:hover{
+  background: #506cea;
+}
+footer .links {
+  margin-top: 20px;
+}
+footer .links a {
+  color: #ffffffff;
+  text-decoration: none;
+}
+/* ====================End Footer area styling====================*/
+
+/* ====================Start About page Area  styling====================*/
+section#head {
+  background: #131956;
+  padding: 80px 0;
+  text-align: center;
+  color: #fff;
+}
+
+section#head h2 {
+  font-size: 40px;
+}
+
+section#head p a {
+  color: #fff;
+}
+
+section#head p span {
+  color: #506cea;
+}
+#about h5 {
+  font-size: 24px;
+  color: #506cea;
+  position: relative;
+  margin-left: 60px;
+}
+
+#about h5::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  background: #506cea;
+  bottom: 5px;
+  left: -60px;
+}
+
+#about h2 {
+  font-size: 35px;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
+#about ul {
+  padding: 0;
+}
+
+#about ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+#about ul li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  margin-right: 10px;
+  color: #506cea;
+}
+/* 
+#laptopIcon{
+  animation: laptopIcon 1s linear alternate;
+}
+#laptopLine{
+  animation: laptopLine 1s linear alternate;
+}
+@keyframes laptopIcon{
+  from{
+    transform: rotate(360px);
+  }
+  to{
+    transform: rotate(0px);
+  }
+} */
+
+
+/* ==================== End About page  Area  styling====================*/
+
+/* ==================== Start Team Page  styling====================*/
+#team .team-card {
+  border: 1px solid #F3F5FF;
+  border-radius: 5px;
+  padding: 25px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin-bottom: 30px;
+}
+
+#team .team-card .team-img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 30px;
+}
+
+#team .team-card .team-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid #F3F5FF;
+}
+
+#team .team-card .name {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+#team .team-card .deg {
+  font-size: 16px;
+  line-height: 5px;
+  font-weight: 400;
+  color: #506cea;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#team .team-card ul.social {
+  margin-top: 50px;
+  padding: 0;
+}
+
+#team .team-card ul.social li {
+  list-style: none;
+  display: inline-block;
+}
+
+#team .team-card ul.social a {
+  text-decoration: none;
+  display: block;
+  color: #101F41;
+  padding-right: 8px;
+  opacity: .8;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#team .team-card ul.social a:hover {
+  padding: 0 10px;
+  opacity: 1;
+  color: #ffffffff;
+}
+
+#team .team-card:hover {
+  background: #506cea;
+  border: 1px solid #506cea;
+  color: #ffffffff;
+}
+
+#team .team-card:hover .deg {
+  color: #ffffffff;
+}
+/* ==================== End Team Page  styling====================*/
+
+/* ==================== Start Blog Page  styling====================*/
+ul.blogPageNo {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+ul.blogPageNo li a {
+  background: #506cea;
+  margin: 0 5px;
+  padding: 10px 15px;
+  color: #fff;
+  transition: all .3s ease;
+  border: 2px solid transparent;
+}
+
+ul.blogPageNo li a:hover {
+  background: transparent;
+  color: #506cea;
+  border: 2px solid #506cea;
+}
+/* ==================== End Blog Page  styling====================*/
+
+/* ==================== Start Contact Page  styling====================*/
+#contact .contact-box {
+  padding: 30px;
+  position: relative;
+  background: #F3F5FF;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+#contact .contact-box:hover {
+  box-shadow: 0px 0px 14px 2px rgba(16, 31, 65, 0.25);
+}
+
+#contact .contact-box i.icon-1 {
+  font-size: 40px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  line-height: 80px;
+  background: #506cea;
+  color: #ffffffff;
+  margin-bottom: 30px;
+  transition: 1s;
+}
+#contact .contact-box:hover .icon-1{
+  transform: rotate(360deg);
+}
+#contact .contact-box .icon-2 {
+  transition: 0.4s;
+  position: absolute;
+  font-size: 90px;
+  color: #506cea;
+  opacity: 0.3;
+  bottom: -10px;
+  right: -10px;
+}
+#contact .contact-box:hover .icon-2 {
+  bottom: 10px;
+  right: 10px;
+}
+#contact .contact-box p {
+  font-size: 20px;
+}
+
+#contact .contact-head {
+  font-size: 30px;
+  position: relative;
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+
+#contact .input-group-text {
+  background: #506cea !important;
+  color: #ffffffff !important;
+  font-size: 20px !important;
+}
+
+#contact .btn-primary {
+  background: #506cea;
+  padding: 10px 30px;
+  border: 1px solid transparent;
+  transition: .4s;
+}
+#contact .btn-primary:hover {
+  background: transparent;
+  border: 1px solid #506cea;
+  color: #506cea;
+}
+
+#contact input::placeholder, 
+#contact textarea:focus::placeholder {
+  transition: 0.4s;
+}
+#contact input:focus::placeholder, 
+#contact textarea:focus::placeholder {
+     transform: translateX(-250px);
+}
+
+#contact .contact-form {
+  margin-top: 50px;
+}
+iframe {
+  width: 100%;
+}
+/* ==================== End Contact Page  styling====================*/
+
+/* ==================== Start Blog-details Area styling====================*/
+.blog-dtls img {
+  border-radius: 10px;
+}
+
+.blog-dtls .blg-txt {
+  padding: 0 30px;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.blog-right {
+  padding: 0 20px;
+}
+
+.blog-right h5.heading {
+  font-size: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.blog-right .tags {
+  padding: 0px;
+}
+
+.blog-right .tags li {
+  list-style: none;
+  display: inline-block;
+}
+
+.blog-right .tags li a {
+  display: block;
+  text-decoration: none;
+  color: #ffffffff;
+  background: #506cea;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 4px;
+}
+
+.blog-right .archive a, .blog-right .catagories a {
+  color: #101F41 !important;
+}
+
+.blog-right .archive .badge-primary, .blog-right .catagories .badge-primary {
+  background: #506cea !important;
+}
+
+.comments {
+  margin-top: 50px;
+}
+
+.comments h5 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.comments .comment-avatar {
+  width: 15%;
+  float: left;
+  margin-right: 20px;
+}
+
+.comments .comment-avatar img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.comments .comments-body {
+  width: 80%;
+  float: left;
+}
+
+.comments .comments-body .name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.comments .comments-body .data-info span {
+  padding-right: 5px;
+}
+
+.comments .comments-body .data-info a {
+  text-decoration: none;
+  color: #506cea;
+  margin-left: 10px;
+}
+
+.post-comment {
+  background: #F3F5FF;
+}
+
+.post-comment .comment-head {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.post-comment .input-group-text {
+  background: #506cea !important;
+  color: #ffffffff !important;
+  font-size: 20px !important;
+}
+
+.post-comment .btn-primary {
+  background: #506cea;
+  padding: 10px 30px;
+}
+.post-comment input::placeholder, .post-comment textarea:focus::placeholder {
+  transition: 0.4s;
+}
+.post-comment input:focus::placeholder, .post-comment textarea:focus::placeholder {
+          transform: translateX(-150px);
+}
+.post-comment .contact-form {
+  margin-top: 50px;
+}
+
+/* ==================== End Blog-details Area styling====================*/

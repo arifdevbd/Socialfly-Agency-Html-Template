@@ -1,0 +1,76 @@
+
+/* 
+============================================================================================
+================================== Start Responsive Styling ==========================================
+============================================================================================
+ */
+ 
+ @media (max-width: 399.98px) { 
+
+ }
+ @media (max-width: 575.98px) { 
+    .bannerRight svg {
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .aboutOurImg svg {
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .main {
+        margin-bottom: 60px !important;
+    }
+    .comments .comments-body {
+        width: 100%;
+    }
+    .blog-dtls .blg-txt {
+        padding: 0 16px;
+        font-size: 16px;
+    }
+ }
+ @media (max-width: 767.98px) { 
+    .conterItem:before,
+    .conterItem::after{
+        display: none;
+    }
+    .conterItem {
+        padding: 10px 0;
+    }
+    #counter {
+        padding: 20px 0;
+    }
+    .slick-next {
+        top: calc(100% + 20px) !important;
+        right: 20px !important;
+    }
+    .slick-prev{
+        top: calc(100% + 20px) !important;
+        left: 20px !important;
+    }
+ }
+ @media (max-width: 991.98px) { 
+    #menu {
+        height: auto !important;
+    }
+    #banner {
+        padding: 40px 0 30px 0;
+    }
+    .aboutOrder{
+        order: 2;
+    }
+
+    .teamOrder{
+        order: 2;
+    }
+    .footerCopy {
+        margin-top: 20px;
+    }
+ }
+ @media (max-width: 1199.98px) { 
+
+ }
+
+
+
